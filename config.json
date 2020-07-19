@@ -2,22 +2,22 @@
 	"language": "en",
 	"init": {
 		"fullscreen": true,
-		"width": 1440,
-		"height": 900,
+		"width": 1920,
+		"height": 1080,
 		"showDevTools": false,
-		"useGPIO": false,
-		"grayscaleMode": true,
+		"useGPIO": true,
+		"grayscaleMode": false,
 		"preventScreensaver": true
 	},
-	"maxImageSize": "1500",
-	"firstPhotoCountdownLength": "5",
+	"maxImageSize": "3888",
+	"firstPhotoCountdownLength": "8",
 	"followingPhotosCountdownLength": "3",
-	"photoPreviewDuration": "8",
-	"photoSeriesLength": "3",
+	"photoPreviewDuration": "5",
+	"photoSeriesLength": "1",
 	"slideshow": {
-		"enabled": true,
-		"activatesAfterSeconds": "30",
-		"secondsPerPhoto": "8"
+		"enabled": false,
+		"activatesAfterSeconds": "10",
+		"secondsPerPhoto": "5"
 	},
 	"gphoto2": {
 		"capturetarget": 1,
@@ -46,8 +46,11 @@
 	},
 	"branding": {
 		"type": "text",
-		"content": "<div style='font-size: 1.2em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.5em;'></i> <b style='font-size: 2em; padding-left: 15px;'>photo-booth</b><br /><p>Log into wifi, browse to <b style='padding: 0 5px;'>photo.app</b> and download your photos!</p></div>",
+		"content": "<div style='font-size: 1.2em; padding-center: 25px;'><b style='font-size: 2em; padding-center: 15px;'>Photomaton</b><br /><p>Appuyer sur le bouton pour prendre une photo !</p></div>",
 		"position": "bottomleft"
+	},
+	"live": {
+		"framerate": 10
 	},
 	"flash": {
 		"enabled": true
