@@ -53,7 +53,7 @@ camera.initialize(function( res, msg, err) {
   let liveConfig = utils.getConfig().live;
   if(liveConfig){
     livePreview = new LivePreview(camera.camera, document.getElementById('live'), liveConfig.framerate);
-    livePreview.start()
+    //livePreview.start()
   }
 });
 
@@ -117,6 +117,10 @@ function trigger(callback) {
   executing = true;
 
   slideshow.stop();
+  if(liveConfig){
+    document.getElementById("live").style.visibility = "visible";
+    livePreview.start();
+  }
 
   if (camera.isInitialized()) {
 
@@ -181,8 +185,10 @@ function trigger(callback) {
 
               webApp.sendNewPhoto(message2);  // send image to connected web clients
 
-              if(livePreview)
-                livePreview.start()
+              if(livePreview){
+                livePreview.stop();
+                document.getElementById("live").style.visibility = "hidden";
+              }
               slideshow.start();
 
             } else {
